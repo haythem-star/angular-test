@@ -9,20 +9,41 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 
+import {MatButtonModule} from '@angular/material/button';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatCardModule} from '@angular/material/card';
+
+
+
+import {MatDialogModule} from '@angular/material/dialog';
+
+
+
+
+
+
 @NgModule ({
-    imports : [
-        MatAutocompleteModule,
-        MatFormFieldModule,
+    imports : [MatFormFieldModule,
         MatInputModule,
         MatIconModule,
+        MatDialogModule,
+        MatCardModule,
+        MatButtonToggleModule,
+        MatButtonModule,
+        MatAutocompleteModule,
         MatSnackBarModule,
+
     ],
-    exports : [
-        MatAutocompleteModule,
-        MatFormFieldModule,
+    exports : [MatFormFieldModule,
         MatInputModule,
         MatIconModule,
+        MatDialogModule,
+        MatCardModule,
+        MatButtonToggleModule,
+        MatButtonModule,
+        MatAutocompleteModule,
         MatSnackBarModule,
+
     ]
 })
 

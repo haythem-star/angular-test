@@ -1,0 +1,43 @@
+.total {
+  margin: auto;
+  padding: 20px;
+  width: 75%;
+  background-color: rgba(212, 211, 211, 0.349);
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.title {
+  font-size: large;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.pho1 {
+  vertical-align: middle;
+  margin-right: 5px;
+  color: green;
+  padding: 5px;
+}
+.pho2 {
+  vertical-align: middle;
+  margin-right: 5px;
+  color: red;
+  padding: 5px;
+}
+.pho3 {
+  vertical-align: middle;
+  margin-right: 5px;
+  color: orange;
+  padding: 5px;
+}
+.content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+}

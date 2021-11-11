@@ -1,0 +1,57 @@
+<div *ngFor="let user of dummy_data; let i = index">
+  <div class="total" *ngIf="user.id.includes(id)">
+    <div class="title">
+      <span style="size: 10px">{{ user.name }}</span>
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="pho1"
+        *ngIf="user.verified === 'good'"
+        >check_circle</mat-icon
+      >
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="pho2"
+        *ngIf="user.verified === 'bad'"
+        >remove_circle</mat-icon
+      >
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Example home icon"
+        class="pho3"
+        *ngIf="user.verified === 'medium'"
+        >remove_circle</mat-icon
+      >
+    </div>
+    <div class="content">
+      <div>
+        <div class="item">
+          <p style="color: black; font-size: medium">Next Payment Date :</p>
+          <p style="color: rgb(53, 53, 53)">{{ user.next_payment }}</p>
+        </div>
+        <div class="item">
+          <p style="color: black; font-size: medium">Amount :</p>
+          <p style="color: rgb(53, 53, 53)">{{ user.amount }}</p>
+        </div>
+        <div class="item">
+          <p style="color: black; font-size: medium">Valid Unit :</p>
+          <p style="color: rgb(53, 53, 53)">{{ user.validation }}</p>
+        </div>
+      </div>
+      <div>
+        <div class="item">
+          <p style="color: black; font-size: medium">Last payment Date :</p>
+          <p style="color: rgb(53, 53, 53)">{{ user.last_payment }}</p>
+        </div>
+        <div class="item">
+          <p style="color: black; font-size: medium">Recurring period :</p>
+          <p style="color: rgb(53, 53, 53)">
+            {{ user.recurring_period }} month
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>

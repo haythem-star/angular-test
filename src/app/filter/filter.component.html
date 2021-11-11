@@ -1,1 +1,22 @@
-<p>filter works!</p>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>ID</mat-label>
+      <input type="text"
+             placeholder="Pick one"
+             aria-label="ID"
+             matInput
+             [formControl]="myControl"
+             [matAutocomplete]="auto"
+             (ngModelChange)="placeChange($event)">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+
+  <hr>
+  <br>
+
+  <app-payment-details *ngIf="displayUser"></app-payment-details>

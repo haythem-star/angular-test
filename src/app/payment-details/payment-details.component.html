@@ -1,5 +1,5 @@
 <div *ngFor="let user of dummy_data; let i = index">
-  <div class="total" *ngIf="user.id.includes(id)">
+  <div class="total" *ngIf="id !== '' && user.id.includes(id)">
     <div class="title">
       <span style="size: 10px">{{ user.name }}</span>
       <mat-icon

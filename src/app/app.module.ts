@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule ,ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -7,6 +8,8 @@ import { FilterComponent } from './filter/filter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModel } from './material.model';
 
+
+import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,8 +19,12 @@ import { MaterialModel } from './material.model';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModel
+    MaterialModel,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
